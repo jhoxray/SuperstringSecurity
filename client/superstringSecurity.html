@@ -1,0 +1,25 @@
+<template name="superstringSecurity">
+    <div id="ssPasswordResetForm" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h2>Enter your new password</h2>
+        </div>
+        <div class="modal-body">
+            <div class="form-horizontal well">
+                <fieldset>
+                    <div class="control-group" id="inputNameControlGroup">
+                        <div class="controls">
+                            <input type="text" id="ssNewPassword" placeholder="enter new password" />
+                            <span class="help-inline" id="inputNewPasswordControlGroupHelp"></span>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+            <button type="submit" class="btn btn-info" id="ssBtnNewPassword">Submit</button>
+        </div>
+
+    </div>
+</template>
