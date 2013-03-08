@@ -1,3 +1,4 @@
+try {
 Package.describe({
     summary: "Security framework for multi-tenant / corporate environments"
 });
@@ -11,3 +12,7 @@ Package.on_use(function (api) {
     api.add_files('client/superstringSecurity.html','client');
 
 });
+}
+catch(err) {
+    console.log(err.message);
+}
