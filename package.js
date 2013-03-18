@@ -8,8 +8,8 @@ Package.on_use(function (api) {
 
     api.add_files('superstringSecurity.coffee',['client','server']);
     api.add_files('server/core.coffee','server');
-    api.add_files('client/core.coffee','client');
     api.add_files('client/superstringSecurity.html','client');
+    api.add_files('client/core.coffee','client');
 
 });
 }
