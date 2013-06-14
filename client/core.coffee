@@ -1,5 +1,6 @@
 #http://localhost:3000/#/reset-password/wN8vzfWyF9g3xp2Pq
 _tlog = TLog?.getLogger(TLog.LOGLEVEL_INFO)
+SuperstringSecurity = @SuperstringSecurity or= {}
 
 # setting up a catch function for password reset functionality
 Meteor.startup ->

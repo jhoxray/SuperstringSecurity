@@ -1,4 +1,5 @@
 _tlog = TLog?.getLogger()
+SuperstringSecurity = @SuperstringSecurity or= {}
 
 # Definitions of sensitive server operations
 Meteor.methods

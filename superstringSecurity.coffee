@@ -1,5 +1,6 @@
 _tlog = TLog?.getLogger(TLog.LOGLEVEL_INFO)
-SuperstringSecurity = {}
+
+SuperstringSecurity = @SuperstringSecurity or= {}
 
 _.extend SuperstringSecurity,
 
