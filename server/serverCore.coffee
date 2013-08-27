@@ -1,7 +1,8 @@
 _tlog = TLog?.getLogger()
-SuperstringSecurity = @SuperstringSecurity or= {}
+#SuperstringSecurity = @SuperstringSecurity or= {}
 
 # Definitions of sensitive server operations
+_tlog?.debug "Running Meteor Startup","SuperstringSecurity"
 Meteor.methods
   ssDeleteUser: (uid)->
     if @userId
@@ -20,6 +21,7 @@ Meteor.methods
 
 
   ssCreateUser: (email, username, profile)->
+    _tlog.debug "Creating user - server side - #{email}, #{username}", "SuperstringSecurity"
     if @userId
       user = Meteor.users.findOne @userId
       try

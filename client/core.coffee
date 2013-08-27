@@ -1,10 +1,10 @@
 #http://localhost:3000/#/reset-password/wN8vzfWyF9g3xp2Pq
-_tlog = TLog?.getLogger(TLog.LOGLEVEL_INFO)
+_tlog = TLog?.getLogger()
 SuperstringSecurity = @SuperstringSecurity or= {}
 
 # setting up a catch function for password reset functionality
 Meteor.startup ->
-  #_tlog?.debug "Running Meteor Startup","SuperstringSecurity"
+  _tlog?.debug "Running Meteor Startup","SuperstringSecurity"
   if (Accounts._resetPasswordToken)
     Session.set 'resetPassword', Accounts._resetPasswordToken
     _tlog?.warn "Got a resetPassword token! " + Accounts._resetPasswordToken

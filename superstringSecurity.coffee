@@ -1,4 +1,4 @@
-_tlog = TLog?.getLogger(TLog.LOGLEVEL_INFO)
+_tlog = TLog?.getLogger()
 
 SuperstringSecurity = @SuperstringSecurity or= {}
 
@@ -30,11 +30,11 @@ _.extend SuperstringSecurity,
     _tlog.warn "Authorized current user as an administrator!" if ret
     ret
 
-
   sendResetPasswordEmail: (uid,email)->
     Meteor.call "ssSendResetPasswordEmail", uid, email
 
   createUser: (email, username, profile)->
+    _tlog.debug "Creating user #{email}, #{username}", "SuperstringSecurity"
     Meteor.call "ssCreateUser", email, username, profile
 
   deleteUser: (uid)->
